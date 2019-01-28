@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using Client.Api;
 using Client.Utils;
 using CommandLine;
 
@@ -16,10 +17,15 @@ namespace Client.Verbs
         
         public static int ExecuteUploadAndReturnExitCode(UploadOptions options)
         {
-            var file = new FileInfo(options.FileName);
-            Console.WriteLine($"Uploading {file.FullName}");
-            Console.WriteLine($"Password: {options.Password}");
+            var uploadObject = Upload(options);
+            _Api.Api.ExecuteApiProcess(uploadObject);
             return 0;
+        }
+
+        public static SerializableOption Upload(UploadOptions options)
+        {
+            SerializableOption uploadObject = new SerializableOption(options.FileName, options.Password, "upload");
+            return uploadObject;
         }
     }
 }

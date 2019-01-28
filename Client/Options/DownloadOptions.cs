@@ -1,4 +1,6 @@
 using System;
+using Client.Api;
+using Client._Api;
 using CommandLine;
 
 namespace Client.Verbs
@@ -14,8 +16,16 @@ namespace Client.Verbs
 
         public static int ExecuteDownloadAndReturnExitCode(DownloadOptions options)
         {
-            Console.WriteLine(options.FileName);
+            var downloadObject = Download(options);
+            _Api.Api.ExecuteApiProcess(downloadObject);
+
             return 0;
+        }
+
+        public static SerializableOption Download(DownloadOptions options)
+        {
+            SerializableOption downloadObject = new SerializableOption(options.FileName, options.Password, "download");
+            return downloadObject;
         }
     }
 }

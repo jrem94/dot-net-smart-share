@@ -17,21 +17,20 @@ namespace Client
             foreach (var args in new List<string[]>
             {
                 //experiment with different command line values here
-                new[] {"download", "test.txt", "password"}, 
-                new[] {"-h"},
-                new[] {"--version"},
-                new[] {"upload"},
-                new[] {"upload", "Program.cs"},
-                new[] {"upload", "Program.cs", "password123"},
-                new[] {"download"},
-                new[] {"download", "Program.cs"},
-                new[] {"download", "Program.cs", "p@ssw0rd"},
-                new[] {"download", "Program.cs", "password123"}
+                //new[] {"download", "test.txt", "password"}, 
+                //new[] {"-h"},
+                //new[] {"--version"},
+                //new[] {"upload"},
+                //new[] {"upload", "program.cs"},
+                new[] {"upload", "testFile.txt", "password123"},
+                //new[] {"download"},
+                //new[] {"download", "program.cs"},
+                //new[] {"download", "program.cs", "p@ssw0rd"},
+                //new[] {"download", "program.cs", "password123"}
             })
             {
                 Console.WriteLine("*** RUN #{0}, args: {1}", runCount++, String.Join(" ", args));
                 __YourMain(args);
-                Console.WriteLine("");
             }
         }
 
