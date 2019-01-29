@@ -15,11 +15,11 @@ namespace Client.Verbs
         [Value(1, MetaName = "password", HelpText = "Password for the file", Required = false)]
         public string Password { get; set; } = PasswordGenerator.Generate();
 
+        [Value(3, MetaName = "maxDownloads", HelpText = "Maximum number of times file can be downloaded", Required = false)]
+        public int MaxDownloads { get; set; } = -1;
+
         [Value(2, MetaName = "expiration", HelpText = "Number of minutes file will be available to download", Required = false)]
         public double Expiration { get; set; } = 60;
-
-        [Value(3, MetaName = "maxDownloads", HelpText = "Maximum number of times file can be downloaded", Required = false)]
-        public int MaxDownloads { get; set; } = -1;//if left @-1 there will be no cap on downloads
         
         public static int ExecuteUploadAndReturnExitCode(UploadOptions options)
         {

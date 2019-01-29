@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Client.DataTransferObjects
 {
-    [Serializable()]
+    [Serializable()] 
     public class FileObject
     {
         public string Password { get; set; }

@@ -14,7 +14,7 @@ namespace Server.RequestHandler
     public class RequestHandler
     {
 
-        public static void HandleClientRequest(TcpClient client)
+        public static void HandleClientRequest(TcpClient client) 
         {
             Response response = new Response(false, "Failed response.");
             using (NetworkStream stream = client.GetStream())
