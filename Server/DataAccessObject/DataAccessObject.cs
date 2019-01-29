@@ -20,8 +20,7 @@ namespace Server.DataAccessObject
             this.Db = db;
             this.File = file;
         }
-
-        //
+        
         public Response ViewResponse()
         {
             Response response;

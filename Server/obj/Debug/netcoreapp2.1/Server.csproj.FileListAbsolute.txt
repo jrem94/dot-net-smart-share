@@ -18,3 +18,11 @@ C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\o
 C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\obj\Debug\netcoreapp2.1\Server.AssemblyInfo.cs
 C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\obj\Debug\netcoreapp2.1\Server.dll
 C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\obj\Debug\netcoreapp2.1\Server.pdb
+C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\bin\Debug\netcoreapp2.1\Server.deps.json
+C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\bin\Debug\netcoreapp2.1\Server.runtimeconfig.json
+C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\bin\Debug\netcoreapp2.1\Server.runtimeconfig.dev.json
+C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\bin\Debug\netcoreapp2.1\Server.dll
+C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\bin\Debug\netcoreapp2.1\Server.pdb
+C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\bin\Debug\netcoreapp2.1\Client.dll
+C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\bin\Debug\netcoreapp2.1\Client.pdb
+C:\Users\jrem9\Desktop\CookSys\FTD\dotnet-assessment-smart-share-jrem94\Server\obj\Debug\netcoreapp2.1\Server.csproj.CopyComplete
