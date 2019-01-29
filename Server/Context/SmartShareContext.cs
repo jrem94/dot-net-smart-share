@@ -11,7 +11,8 @@ namespace CsharpAssessmentSmartShare
         public DbSet<Model> Files { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("server=127.0.0.1;port=5432;database=smartShare;userid=postgres;password=bondstone");
+            //My pgAdmin server is set to port 8080. This line of code may need to be changed in order to connect on another system.
+            optionsBuilder.UseNpgsql("server=127.0.0.1;port=8080;database=smartShare;userid=postgres;password=bondstone");
         }
     }
 

@@ -24,9 +24,9 @@ namespace Server.DataAccessObject
         public Response ViewResponse()
         {
             Response response;
-            var query = from f in Db.Files
-                        where f.FileName == this.File.FileName
-                        select f;
+            var query = from data in Db.Files
+                        where data.FileName == this.File.FileName
+                        select data;
             var file = query.SingleOrDefault();
 
             if (file != null && file.Password.Equals(File.Password))
@@ -59,9 +59,9 @@ namespace Server.DataAccessObject
 
         public Response UploadResponse()
         {
-            var query = from f in Db.Files
-                where f.FileName == this.File.FileName
-                select f;
+            var query = from data in Db.Files
+                where data.FileName == this.File.FileName
+                select data;
             var dbFile = query.SingleOrDefault();
 
             if(dbFile != null)
@@ -91,9 +91,9 @@ namespace Server.DataAccessObject
         public Response DownloadResponse()
         {
             Response returnDto;
-            var query = from f in Db.Files
-                where f.FileName == this.File.FileName
-                select f;
+            var query = from data in Db.Files
+                where data.FileName == this.File.FileName
+                select data;
             var dbFile = query.SingleOrDefault();
             DateTime now = DateTime.Now;
    
