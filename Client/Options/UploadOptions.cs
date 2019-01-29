@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using Client.Api;
 using Client.Utils;
 using CommandLine;
+
 
 namespace Client.Verbs
 {
@@ -14,18 +14,23 @@ namespace Client.Verbs
 
         [Value(1, MetaName = "password", HelpText = "Password for the file", Required = false)]
         public string Password { get; set; } = PasswordGenerator.Generate();
+
+        [Value(2, MetaName = "expiration", HelpText = "Number of minutes file will be available to download", Required = false)]
+        public double Expiration { get; set; } = 60;
+
+        [Value(3, MetaName = "maxDownloads", HelpText = "Maximum number of times file can be downloaded", Required = false)]
+        public int MaxDownloads { get; set; } = -1;//if left @-1 there will be no cap on downloads
         
         public static int ExecuteUploadAndReturnExitCode(UploadOptions options)
         {
-            var uploadObject = Upload(options);
-            _Api.Api.ExecuteApiProcess(uploadObject);
+            
+            var file = new FileInfo(options.FileName);
+            if (!file.Exists)
+            {
+                return 10;
+            }
+            Api.Api.Upload(file.FullName, options.Password, options.Expiration, options.MaxDownloads);
             return 0;
-        }
-
-        public static SerializableOption Upload(UploadOptions options)
-        {
-            SerializableOption uploadObject = new SerializableOption(options.FileName, options.Password, "upload");
-            return uploadObject;
         }
     }
 }
